@@ -1,0 +1,20 @@
+# extends
+
+layout.pug 파일이 있다면
+```pug
+doctype html  
+html  
+ head title= title  
+  link(rel='stylesheet', href='/stylesheets/style.css')  
+  body  
+ block content
+```
+
+index.pug 파일
+```pug
+extends layout  
+  
+block content  
+  h1= title  
+  p Welcome to #{title}
+```
