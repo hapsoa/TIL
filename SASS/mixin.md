@@ -25,9 +25,45 @@ $nav-height: 50px
   border-top-left-radius: $lt
 ```
 
+
 style.sass (한 페이지의 스타일 파일)
 ```sass
 @import "global"  
   
 아래는 그 페이지 코드 
+```
+
+
+
+-------
+
+1. 미디어 쿼리 기본 
+```sass
+@media screen and (max-width: 1280px) and (min-width: 721px)
+	.content-field
+		background: #f00
+
+@media screen and (max-width: 720px)		
+	.content-field
+		background: #f0f
+```
+
+2. @mixin을 이용한 _global.sass 내용
+```sass
+@mixin view-mobile
+	@media screen and (max-width: 480px)	
+		@content
+
+@mixin view-tablet
+	@media screen and (max-width: 960px)		
+		@content
+```
+
+3. style.sass(한 페이지 스타일)에 mixin 적용
+```sass
+@include view-tablet
+	background: #f0f
+
+@include view-mobile
+	background: #f00	
 ```
