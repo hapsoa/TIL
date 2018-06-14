@@ -1,4 +1,4 @@
-# a tag 뒤로가기 새로가기 앞으로가기
+# a tag 뒤로가기 새로고침 앞으로가기
 
 ```html
 <a href="javascript:history.back()">뒤로가기</a>
