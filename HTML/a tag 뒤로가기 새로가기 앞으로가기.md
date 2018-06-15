@@ -5,3 +5,4 @@
 <a href="javascript:location.reload()">새로고침</a>
 <a href="javascript:history.forward()">앞으로 가기</a>
 ```
+

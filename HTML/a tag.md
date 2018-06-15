@@ -15,3 +15,10 @@
 |rel| 현재 문서와 링크한 문서의 관계를 알려줍니다|
 |hreflang|링크한 문서의 언어를 지정합니다|
 |type|링크한 문서의 파일 유형을 알려줍니다.
+
+## a tag 기본 스타일 제거방법
+
+```css
+text-decoration-line: none
+color: black
+```
