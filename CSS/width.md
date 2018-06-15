@@ -1,4 +1,7 @@
-# max-width
+# width
+width: fit-content
+
+## max-width
 
 예시를 보는게 더 빠른듯
 
