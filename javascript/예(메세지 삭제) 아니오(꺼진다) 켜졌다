@@ -1,0 +1,25 @@
+예(메세지 삭제) 아니오(꺼진다) 켜졌다
+
+
+끄기 버튼을 누르면
+
+dialog 창이 뜬다.
+
+전체를 다 가려야 하기 때문에,
+
+
+
+
+x를 눌러야 transparent-black-box 가 생겨야 한다.
+
+
+
+
+id 든 attribute 로 찾아온다.
+
+setTimeout
+
+setInterval
+clearInterval
+
+pointer-events: none
