@@ -1,15 +1,3 @@
-babel 설정을 했으니,
-
-접속을 해보도록 한다.
-
-pug 파일을
-script()를 설정한다.
-
-
-babel 설정을 복습을 한다.
-
-그리고 Promise.all()을 활용하는 방법에 대해서 더 강구를 할 수 있도록 한다.
-
 1. babel 이란 javascript를 인터넷 익스플로러 다양한 브라우저 환경에서
 실행되도록 하는 컴파일러라고 볼 수 있다.
 
@@ -57,3 +45,10 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 // cdn을 사용하지 않고 local에서 라이브러리를 사용하는 것
 
 app.use(express.static(path.join(__dirname, 'dist')));
+
+
+
+babel 이용시 regenerateruntime 이 오류가 나는데,
+npm install babel-polyfill (옵션 더 있을 듯) 설치하고
+script(src="/babel-polyfill/dist/polyfill.js") 를 pug의
+head에 추가하면 될 것이다.
