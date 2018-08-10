@@ -54,5 +54,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
-// 얘는 cdn or local
+// cdn을 사용하지 않고 local에서 라이브러리를 사용하는 것
+
 app.use(express.static(path.join(__dirname, 'dist')));
