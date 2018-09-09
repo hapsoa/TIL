@@ -773,3 +773,8 @@ terminal 접속해서 vue-router-sample(프로젝트 말하는 거)로 가서
 로드밸런서 -> 작업 - 삭제          (얘는 삭제 안 하면 돈 나감.)
 route53 가서 도메인 delete record set 
 (인증서 ssl - 삭제)
+
+
+
+
+
