@@ -53,3 +53,13 @@ vue init simple hellovuejs
 </body>  
 </html>
 ```
+
+model 객체는 변수명 그대로 '모델(Model) 객체'입니다.
+simple 객체는 'Vue 객체'이자 '뷰모델(VieModel) 객체' 입니다.
+<br>
+'Vue 객체'의 'el 속성'은 HTML 요소(Element)를 나타냅니다.
+'data 속성'은 모델 객체를 참조합니다.
+
+<br>
+Vue 객체가 html 요소와 데이터를 참조하고 있습니다.
+이제 데이터(모델)가 변경되면 뷰모델 객체는 즉시 HTML 요소(뷰)에 반영시킵니다.
