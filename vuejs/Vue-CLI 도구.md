@@ -53,3 +53,10 @@ vue add [플러그인]
 ```
 ex) vue add router
 
+## 4. vue.config.js
+
+웹팩 설정을 위해 vue.config.js 라는 파일을 프로젝트 내부에 작성합니다.
+
+## 5. Vue CLI GUI 도구
+
+GUI 로 프로젝트를 생성 / 관리 할 수 있다.
