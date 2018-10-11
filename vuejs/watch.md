@@ -1,6 +1,18 @@
 # watch 속성
 
-감싲
+```javascript
+watch: {
+    groups(to, from) {
+
+    }
+}
+```
+
+에서 group은 prop이나 data이고,
+to는 변경된 데이터,
+from은 변경전 데이터이다.
+
+
 
 ```html
 <!DOCTYPE html>
@@ -95,3 +107,4 @@
 </html>
 
 ```
+
