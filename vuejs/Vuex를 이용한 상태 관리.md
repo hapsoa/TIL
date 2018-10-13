@@ -34,3 +34,67 @@ Vue 컴포넌트가 나타내는 UI는 저장소(Store)의 상태(State)를 반�
 변이 : 상태를 변경하는 함수들을 보유하고 있는 객체
 ```
 
+```javascript
+import Vue from 'vue';
+import Vuex from 'vuex';
+import Constant from '../Constant';
+Vue.use(Vuex);
+
+const store = new Vuex.Store({
+  state: {
+    todolist : [
+      { id:1, todo : "영화보기", done:false },
+      { id:2, todo : "주말 산책", done:true },
+      { id:3, todo : "ES6 학습", done:false },
+      { id:4, todo : "잠실 야구장", done:false },
+    ]
+  },
+  mutations: {
+    [Constant.ADD_TODO] : (state, payload) => {
+      if (payload.todo !== "") {
+        state.todolist.push(
+          { id:new Date().getTime(), todo: payload.todo, done:false });
+      }
+    },
+    [Constant.DONE_TOGGLE] : (state, payload) => {
+      var index = state.todolist.findIndex((item)=>item.id === payload.id);
+      state.todolist[index].done = !state.todolist[index].done;
+    },
+    [Constant.DELETE_TODO] : (state, payload) => {
+      var index = state.todolist.findIndex((item)=>item.id === payload.id);
+      state.todolist.splice(index,1);
+    }
+  }
+});
+
+export default store;
+
+```
+
+```javascript
+import Constant from '../Constant'
+
+  export default {
+    name: 'List',
+    computed : {
+      todolist() {
+        return this.$store.state.todolist;
+      }
+    },
+    methods : {
+      checked : function(done) {
+        if(done) return { checked:true };
+        else return { checked:false };
+      },
+      doneToggle(id) {
+        this.$store.commit(Constant.DONE_TOGGLE, {id: id})
+      },
+      deleteTodo(id) {
+        this.$store.commit(Constant.DELETE_TODO, {id: id})
+      }
+    }
+  }
+```
+
+변이(mutation)는 상태를 변경하기 위해 존재하고, 동기적인 처리만 가능합니다.
+
