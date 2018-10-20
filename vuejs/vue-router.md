@@ -61,3 +61,103 @@
 ## 4. 중첩 라우트
 하나의 컴포넌트가 다시 하위 컴포넌트를 포함하는 경우에 라우팅도 중첩이 가능해야 합니다.
 
+<br>
+App.vue
+
+```html
+<script>
+    import Home from './components/Home.vue';
+    import About from './components/About.vue';
+    import Contacts from './components/Contacts.vue';
+    import ContactByNo from './components/ContactByNo.vue';
+    import VueRouter from 'vue-router';
+
+    const router = new VueRouter({
+        routes: [
+            { path: '/', component: Home },
+            { path: '/home', component: Home },
+            { path: '/about', component: About },
+            {
+                path: '/contacts', component: Contacts,
+                children: [
+                    { path: ':no', component: ContactByNo }
+                ]
+            }
+        ]
+    });
+
+    export default {
+        name: 'app',
+        router
+    }
+
+</script>
+```
+
+<br>
+ContactByNo.vue
+
+```html
+<template>
+    <div>
+        <hr class="divider" />
+        <div >
+            <table class="detail table table-bordered">
+                <tbody>
+                <tr class="active">
+                    <td>일련번호</td>
+                    <td>{{contact.no}}</td>
+                </tr>
+                <tr class="active">
+                    <td>이름</td>
+                    <td>{{contact.name}}</td>
+                </tr>
+                <tr class="active">
+                    <td>전화</td>
+                    <td>{{contact.tel}}</td>
+                </tr>
+                <tr class="active">
+                    <td>주소</td>
+                    <td>{{contact.address}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>
+
+<script>
+    import contactlist from '../ContactList';
+    export default {
+        name : 'contactbyno',
+        data : function() {
+            return {
+                no : 0,
+                contacts : contactlist.contacts
+            }
+        },
+        created : function() {
+            this.no = this.$route.params.no;
+        },
+        watch : {
+            '$route'(to, from) {
+                this.no = to.params.no;
+            }
+        },
+        computed : {
+            contact : function() {
+                var no = this.no;
+                var arr = this.contacts.filter(function(item) {
+                    return item.no == no;
+                });
+                if (arr.length == 1)   return arr[0];
+                else   return {};
+            }
+        }
+    }
+</script>
+```
+
+# 5. 명명된 라우트
+
+명명된 라우트(Named Routes)는 라우트 정보에 고유한 이름을 부여하는 것입니다.
