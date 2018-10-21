@@ -161,3 +161,4 @@ ContactByNo.vue
 # 5. 명명된 라우트
 
 명명된 라우트(Named Routes)는 라우트 정보에 고유한 이름을 부여하는 것입니다.
+
