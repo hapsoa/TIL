@@ -182,3 +182,21 @@ ContactByNo.vue
 </router-link>
 ```
 
+# 6. 프로그래밍 방식의 라우팅 제어
+
+```javascript
+// 문자열 직접 전달
+this.$router.push('/home')
+
+// 객체 정보로 전달
+this.$router.push({path: '/about'})
+
+// 명명된 라우트 사용
+this.$router.push({name: 'contacts', params: { no : 1002}})
+
+// 쿼리 문자열 전달  ex) /contacts?pageno=1&pagesize=5
+router.push({ path: '/contacts', query: { pageno: 1, pagesize: 5}})
+```
+
+# 7. 라우팅 모드
+

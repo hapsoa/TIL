@@ -98,3 +98,54 @@ import Constant from '../Constant'
 
 변이(mutation)는 상태를 변경하기 위해 존재하고, 동기적인 처리만 가능합니다.
 
+<br>
+
+## 5. 액션
+
+비동기적으로 처리
+
+<br>
+
+store 폴더의 index.js
+
+```javascript
+actions : {
+    [Constant.ADD_TODO] : (store, payload) => {
+      console.log("###addTodo!!!", payload);
+      store.commit(Constant.ADD_TODO, payload);
+    },
+    [Constant.DELETE_TODO] : (store, payload) => {
+      console.log("###deleteTodo!!!", payload);
+      store.commit(Constant.DELETE_TODO, payload);
+    },
+    [Constant.DONE_TOGGLE] : (store, payload) => {
+      console.log("###doneToggle!!!", payload);
+      store.commit(Constant.DONE_TOGGLE, payload);
+    }
+  }
+```
+
+<br>
+
+InputTodo.vue
+```javascript
+methods: {
+      addTodo: function() {
+        this.$store.dispatch(Constant.ADD_TODO, { todo: this.todo});
+        this.todo = "";
+      }
+    }
+```
+
+<br>
+
+### Store 객체의 속성
+
+| 속성명 | 설명 |
+|--|--|
+| commit |변이를 일으키기 위한 메서드 입니다 |
+| dispatch | 액션을 호출하기 위한 메서드입니다. 한 액션에서 다른 액션을 호출할 수 있습니다 |
+| getters | 모듈 자기 자신의 게터입니다 |
+| rootGetters | 루트 저장소의 게터입니다 |
+| state | 모듈 자기 자신의 상태 데이터입니다 |
+| rootState | 루트 저장소의 상태 데이터입니다 |
