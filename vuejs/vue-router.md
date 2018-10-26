@@ -162,3 +162,23 @@ ContactByNo.vue
 
 명명된 라우트(Named Routes)는 라우트 정보에 고유한 이름을 부여하는 것입니다.
 
+```html
+<ul>
+    <li>
+        <router-link v-bind:to="{ name:'home' }">Home</router-link>
+    </li>
+    <li>
+        <router-link v-bind:to="{ name:'about' }">About</router-link>
+    </li>
+    <li>
+        <router-link v-bind:to="{ name:'contacts' }">Contacts</router-link>
+    </li>
+</ul>
+```
+
+```html
+<router-link v-bind:to="{name: 'contactbyno', params: {no: c.no}}">
+    {{c.name}}
+</router-link>
+```
+
