@@ -149,3 +149,4 @@ methods: {
 | rootGetters | 루트 저장소의 게터입니다 |
 | state | 모듈 자기 자신의 상태 데이터입니다 |
 | rootState | 루트 저장소의 상태 데이터입니다 |
+
