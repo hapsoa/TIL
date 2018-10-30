@@ -10,3 +10,4 @@
 | npm run [스크립트명] | yarn [스크립트명] | package.json의 스크립트 명령 실행 |
 | npm uninstall --save [패키지명] | yarn remove [패키지명] | 패키지 삭제 |
 | npm cache clean | yarn cache clean | 캐쉬 삭제 |
+
