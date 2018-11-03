@@ -34,6 +34,12 @@ res.send()에 javascript object를 넣어 보내면, 자동으로 json(string으
 
 쿼리를 req.query에서 받아올 수 있다.
 
+| 추가한 정보 | 설명 |
+|--|--|
+| query | 클라이언트에서 GET 방식으로 전송한 요청 파라미터를 확인합니다. 예) req.query.name |
+| body | 클라이언트에서 POST 방식으로 전송한 요청 파라미터를 확인합니다. 단, body-parser와 같은 외장 모듈을 사용해야 합니다. 예) req.body.name |
+| header(name) | 헤더를 확인합니다. |
+
 ```javascript
 // Express 기본 모듈 불러오기
 var express = require('express')
