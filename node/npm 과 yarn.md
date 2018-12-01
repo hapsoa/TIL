@@ -11,3 +11,9 @@
 | npm uninstall --save [패키지명] | yarn remove [패키지명] | 패키지 삭제 |
 | npm cache clean | yarn cache clean | 캐쉬 삭제 |
 
+
+```
+npm deploy : npm에 패키지를 올린다.
+```
+
+
