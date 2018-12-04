@@ -5,7 +5,9 @@ TypeScript 에서 프로그램 작성을 위해 기본 제공하는 데이터 �
 사용자가 만든 타입은 결국은 이 기본 자료형들로 쪼개집니다.
 
 JavaScript 기본 자료형을 포함 (superset)
-    ECMAScript 표준에 따른 기본 자료형은 6가지
+
+  ECMAScript 표준에 따른 기본 자료형은 6가지
+
 ```
 Boolean
 Number
