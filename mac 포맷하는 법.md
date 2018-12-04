@@ -20,4 +20,82 @@ brew update
 brew install node
 ```
 
+npm i -g npx 을 한다.
+
+npm i -g babel-cli X
+npm i -g web pack X
+
+Global로 설치가 되기 때문에 버전관리에 취약하다.
+
+각 프로젝트 별 환경설정을 전역이 아닌 각각 구성한다.
+
+ngrok, http-server
+프로젝트 내부에 포함되는 모듈이 아니다. 프로젝트 외부에서 실행하거나 독립적으로 실행하는 모듈
+
+npm i -g grok
+npm i -g http-server
+
+
+# visual studio code
+
+command p(ctrl + p) : 현재 폴더에서 명령어
+command shift p : ide 자체의 명령어
+
+command shift p 후 shell 에서 제일 위에서 엔터를 하면 vscode를 터미널에서 실행할수 있게함. ("code ." 치면 열린다)
+
+
+extension
+
+vue.js extension pack
+(gitLens, Vue vsCode Snippets)
+
+
+
+# 생짜로 처음으로 프로젝트 시작할 때
+
+npm init
+
+(license ISC or MIT)
+
+모든 node의 프로젝트는 package.json 으로 돌아간다.
+
+
+src, dist 폴더를 만든다.
+
+npm install tsc --save-dev  (트랜스파일러)
+
+npx tsc 
+(node_modules 안의 tsc를 터미널에서 명령어로 사용할 수 있게 한다)
+
+
+
+tsconfig.json 파일을 루트에 만든다.
+
+```
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",    // require 쓰는 녀석
+        "outDir": "dist",
+        "sourceMap": true
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modues"
+    ]
+}
+```
+
+
+command + , : setting 창
+
+
+
+```
+npm install @vue/cli -g
+```
+
+
 
