@@ -62,7 +62,7 @@ npm init
 
 src, dist 폴더를 만든다.
 
-npm install tsc --save-dev  (트랜스파일러)
+npm install typescript
 
 npx tsc 
 (node_modules 안의 tsc를 터미널에서 명령어로 사용할 수 있게 한다)
@@ -98,7 +98,7 @@ npm install @vue/cli -g
 ```
 
 ```
-npm install typescript
+
 
 npx tsc --init
 ```
@@ -108,3 +108,38 @@ npx tsc --init
 npx tsc
 ```
 를 하면 실행이 된다.
+
+
+
+jsdoc comments 설치
+
+
+
+
+게시글이라는 클래스가 있음
+내부의 자료구조와 함수 설계
+
+head,
+body,
+date,
+recommand,
+
+increaseRecommand ...
+decreaseRecommand ...
+
+util
+    formatter
+        number
+        string
+        time
+            setDefaultFormat(format: string),
+            get(time or date)
+            getTimeByFormat(format, time or date)
+
+YYYY-MM-DD hh:mm:ss
+
+const formatter = {
+    get(time: number | string | Date | undefined): string {
+        return "1997-06-12"
+    }
+}

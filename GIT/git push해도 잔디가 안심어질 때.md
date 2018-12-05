@@ -14,3 +14,7 @@ git config --global user.name "Jaejong Heo"
 git config --global user.email hapsoa@gmail.com
 ```
 
+그러면 해결이 된다.
+
+
+
