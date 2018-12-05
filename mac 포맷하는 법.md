@@ -97,5 +97,14 @@ command + , : setting 창
 npm install @vue/cli -g
 ```
 
+```
+npm install typescript
 
+npx tsc --init
+```
+후에
 
+```
+npx tsc
+```
+를 하면 실행이 된다.
