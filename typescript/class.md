@@ -291,3 +291,178 @@ console.log(person.name);
 3. 마찬가지로 setter 를 함수처럼 설정하면, 추가 작업을 하고 셋팅할 수 있다.
 */
 ```
+
+<br>
+
+## 클래스와 static 프로퍼티 => 클래스 멤버 변수
+
+public static은 의미가 좋은데,
+
+private static은 const가 있어서 생각을 해보라.
+
+```typescript
+class Person {
+    public static CITY = "";
+    private static lastName: string = 'Lee';
+    private _name: string;
+    private _age: number;
+    
+    constructor(name: string, age: number) {
+        this._name = name;
+        this._age = age;
+     }
+
+    public print() {
+        console.log(`${this._name} ${Person.lastName} in ${Person.CITY}.`);
+    }
+}
+
+const person: Person = new Person('Mark', 35);
+Person.CITY = 'Seoul';
+person.print(); // Mark Lee in Seoul.
+
+/*
+1. static 키워드를 붙힌 프로퍼티는 클래스.프로퍼티로 사용한다.
+2. static 프로퍼티에 private, protected 를 붙히면 똑같이 동작한다.
+*/
+```
+
+```typescript
+class Person {
+    public static Talk(): void {
+        console.log('안녕하세요.');
+    }
+}
+
+Person.Talk(); // 안녕하세요.
+```
+
+<br>
+
+## 모듈에서 private static 프로퍼티 혹은 메서드
+
+아래코드 중 상위코드와 하위코드는 의미하는 바가 같은데, 어떻게 사용할 것인가는 알아서하기
+
+```typescript
+class Person {
+    private static PROPERTY = '프라이빗 프로퍼티';
+    private static METHOD() {
+        console.log('프라이빗 메서드');
+    }
+
+    constructor() {
+        console.log(Person.PROPERTY);
+        Person.METHOD();
+    }
+}
+
+//////////////////////////////////////////////
+
+const PROPERTY = '모듈 내 변수';
+function METHOD() {
+    console.log('모듈 내 함수');
+}
+
+export class Person {
+    constructor() {
+        console.log(PROPERTY);
+        METHOD();
+    }
+}
+```
+
+## Abstract Class
+
+글보다는 아래 코드를 보면서 이해할 수 있다.
+
+```typescript
+abstract class APerson {
+    protected _name: string = 'Mark';
+    abstract setName(name: string): void; 
+}
+
+class Person extends APerson {
+    setName(name: string): void {
+        this._name = name;
+    }
+}
+
+// const person = new APerson(); // (X)
+const person = new Person();
+
+/*
+1. abstract 키워드가 사용된 클래스는 new 로 생성할 수 없다.
+2. abstract 키워드가 사용된 클래스를 상속하면 abstract 키워드가 붙은 함수를 구현해야 한다.
+*/
+```
+
+```typescript
+abstract class AClass {
+    abstract hi(): void
+    yap(): void {
+        console.log('yap');
+    }
+}
+
+class NormalClass extends AClass {
+    hello(): void {
+        console.log('hello');
+    }
+
+    hi(): void {
+        console.log('hi');
+    }
+}
+
+const normalClass: AClass = new NormalClass();
+
+normalClass.hi();
+normalClass.yap();
+// normalClass.hello();  // 안됨
+```
+
+<br>
+
+## Class 와 private constructor
+
+```typescript
+class Preference {
+    private constructor() {
+
+    }
+}
+
+// const p: Preference = new Preference(); (X)
+
+/*
+1. 생성자 함수 앞에 접근제어자인 private 을 붙일 수 있다.
+2. 외부에서 생성이 불가능하다.
+*/
+```
+
+## Class 와 싱글톤 패턴
+
+```typescript
+class Preference {
+    public static getInstance() {
+        if (Preference.instance === null) {
+            Preference.instance = new Preference();
+        }
+
+        return Preference.instance;
+    }
+    private static instance: Preference = null;
+    private constructor() {
+
+    }
+}
+
+const p: Preference = Preference.getInstance();
+
+/*
+1. private 생성자를 이용해서 내부에서만 인스턴스 생성이 가능하도록 함.
+2. pubilc static 메서드를 통해 private static 인스턴스 레퍼런스를 획득한다.
+3. Lazy Loading (Initialization) : 최초 실행시가 아니라, 사용시에 할당을 함
+*/
+```
+
