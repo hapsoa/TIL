@@ -1,3 +1,5 @@
+# web framework and library
+
 vue.js, react.js, angular.js : 가상 DOM과 데이터 기반 DOM그리는 프레임워크
 
 d3.js svg : 데이터 시각화 라이브러리
@@ -18,6 +20,13 @@ cheerio : 서버에서 jQuery 사용하고 싶을 때 쓰는 라이브러리 (Fa
 
 gulf : 자동으로 --watch 옵션처럼 저장된 코드를 전환시켜주는 기능을 하는 모듈이지 않을까 예상됨
 
-
-
 tensorflow.js : 머신러닝 라이브러리
+
+module bundler : webpack (비슷한거는 gulf, grunt)
+
+## vue.js 라이브러리
+vuetify : google material design 모듈
+
+bootstrap-vue : twitter design 모듈
+
+vue-cookie : cookie를 vue에서 쓰는 모듈
