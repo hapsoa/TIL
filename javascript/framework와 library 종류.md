@@ -24,9 +24,12 @@ tensorflow.js : 머신러닝 라이브러리
 
 module bundler : webpack (비슷한거는 gulf, grunt)
 
+ckeditor 5: wysiwyg framework (npm 으로 import, require 가능)
+
 ## vue.js 라이브러리
 vuetify : google material design 모듈
 
 bootstrap-vue : twitter design 모듈
 
 vue-cookie : cookie를 vue에서 쓰는 모듈
+
