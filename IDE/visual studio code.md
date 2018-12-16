@@ -7,5 +7,15 @@
 
 ## 단축키
 
+```
 ctrl + . : Quick Fix
+command p(ctrl + p) : 현재 폴더에서 명령어
+command shift p : ide 자체의 명령어
+```
 
+## extionsion
+
+```
+npm-scripts : npm 실행 아이콘
+
+```
