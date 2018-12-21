@@ -12,3 +12,4 @@ google에서 만드는 오픈소스 머신러닝 라이브러리
 Nodes in the graph represent mathematical operations
 
 Edges represent the multidimensional data arrays(tensors) communicated between them.
+
