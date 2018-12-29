@@ -30,6 +30,53 @@ let strLength: number = (someValue as string).length;
 2. jsx 에서는 as 를 쓴다. (react에서 쓰는 뭔가인듯)
 */
 ```
+<br>
 
+ex)2
+```tyescript
+class Character {
+  hp: number;
+  runAway() {
+    /* ... */
+  }
+  isWizard() {
+    /* ... */
+  }
+  isWarrior() {
+    /* ... */
+  }
+}
 
+class Wizard extends Character {
+  fireBall() {
+    /* ... */
+  }
+}
 
+class Warrior extends Character {
+  attack() {
+    /* ... */
+  }
+}
+
+function battle(character: Character) {
+  if (character.isWizard()) {
+    character.fireBall(); // Property 'fireBall' does not exist on type 'Character'.
+  } else if (character.isWarrior()) {
+    character.attack(); // Property 'attack' does not exist on type 'Character'.
+  } else {
+    character.runAway();
+  }
+}
+```
+```typescript
+function battle(character: Character) {
+  if (character.isWizard()) {
+    (character as Wizard).fireBall(); // Pass
+  } else if (character.isWarrior()) {
+    (character as Warrior).attack(); // Pass
+  } else {
+    character.runAway();
+  }
+}
+```
