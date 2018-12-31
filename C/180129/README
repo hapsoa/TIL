@@ -1,0 +1,8 @@
+
+C, C++, C#, Java    -> 정적 언어: 타입이 매우 중요하다.
+ 정적(static): compile
+
+
+Javascript, Python  -> 동적 언어: 타입에 대한 부분은 존재하지만,
+                             런타임에 자동적으로 추론해서 동작한다.
+ 동적(dynamic) / 가상적(virtual) : runtime
