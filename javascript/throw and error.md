@@ -9,6 +9,7 @@ const function1 = (): void => {
     } catch(error) {
         console.error(error);
         throw new Error('yap');
+        // throw error; // 이것도 실행 됨.
     }
 };
 
@@ -16,12 +17,12 @@ const function2 = (): void => {
     let num: number = 1;
     try {
         function1();
-        num++;
+        num++; // 실행안됨
     } catch(error) {
         console.error(error);
     }
-    
     console.log(num);
+    
 }
 
 function2();
