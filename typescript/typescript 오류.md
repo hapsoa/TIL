@@ -20,3 +20,9 @@ declare를 사용하거나, tsconfig.json의 types에 node를 넣고 설치를 �
 ```
 npm install --save-dev @types/node
 ```
+
+### this.변수 에러 잡는 법
+tsconfig.json 의 CompilerOptions에
+```
+"noImplicitThis": false
+```
