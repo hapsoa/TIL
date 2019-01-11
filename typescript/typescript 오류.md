@@ -22,7 +22,15 @@ npm install --save-dev @types/node
 ```
 
 ### this.변수 에러 잡는 법
-tsconfig.json 의 CompilerOptions에
-```
+tsconfig.json 의 CompilerOptions에
+```
 "noImplicitThis": false
+```
+
+### console.log 에러 끄는 법
+tsloint.json에 가서
+```
+"rules": {
+    "no-console": false
+}
 ```
