@@ -9,7 +9,7 @@
 
 ```
 ctrl + . : Quick Fix
-command p(ctrl + p) : 현재 폴더에서 명령어
+command p(ctrl + p) : 현재 폴더(프로젝트)에서 명령어
 command shift p : ide 자체의 명령어
 ```
 
@@ -27,4 +27,10 @@ ctrl + shift + p 해서 configure display language 를 치면
 locale.json이 나오는데
 ```json
 "locale":"en" 혹은 "locale":"ko"
+```
+
+## font 바꾸는 법
+```
+"editor.fontFamily": "consolas",
+"terminal.integrated.fontFamily": "monospace"
 ```
