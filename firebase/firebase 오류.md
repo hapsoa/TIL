@@ -19,4 +19,4 @@
 ```
 gsutil cors set cors.json gs://<your-cloud-storage-bucket>
 ```
-(gs~~~ 는 내 firebase storage 주소)
+(gs://"~~~" 는 내 firebase storage 주소)
