@@ -28,7 +28,7 @@ tsconfig.json 의 CompilerOptions에
 ```
 
 ### console.log 에러 끄는 법
-tsloint.json에 가서
+tslint.json에 가서
 ```
 "rules": {
     "no-console": false
