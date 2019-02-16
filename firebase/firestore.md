@@ -19,4 +19,6 @@ db.collection('posts')
 map 형식으로 찾을 때마다 복합 색인 설정하라고 할 수 있으니
 array로 구조를 맞춘다음에 쿼리를 날릴 수 있다.
 
-
+```javascript
+where("aa", array-contains, "ccc")
+```
