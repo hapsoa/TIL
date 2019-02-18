@@ -9,6 +9,7 @@
 ex)
 
 하위 컴포넌트
+
 ```html
 <!-- ButtonTab.vue -->
 <template>
@@ -24,6 +25,7 @@ ex)
 ```
 
 상위 컴포넌트
+
 ```html
 <!-- TabContainer.vue -->
 <template>
@@ -42,11 +44,11 @@ ex)
 </template>
 
 <script>
-export default {
-  components: {
-    ButtonTab
-  }
-}
+  export default {
+    components: {
+      ButtonTab,
+    },
+  };
 </script>
 ```
 
@@ -71,6 +73,7 @@ ex)
 ```
 
 상위 컴포넌트
+
 ```html
 <!-- TabContainer.vue -->
 <template>
@@ -95,7 +98,7 @@ ex)
 
 <br>
 
-template 태그를 이용하면 부모 컴포넌트에서 slot 안에 
+template 태그를 이용하면 부모 컴포넌트에서 slot 안에
 다양한 컨텐츠를 넣을 수 있는 듯 하다.
 
 ```html
@@ -110,18 +113,5 @@ template 태그를 이용하면 부모 컴포넌트에서 slot 안에
 </button-tab>
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
 <br><br><br><br><br><br><br>
 출처 : https://joshua1988.github.io/web-development/vuejs/slots/
-
