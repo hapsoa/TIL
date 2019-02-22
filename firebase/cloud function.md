@@ -6,3 +6,5 @@
 cloud function이 트리거되서 서버에서 작동되는 형식이랄까
 
 정확한건 더 공부하고 실행해보아야 할 듯 하다.
+
+# cloud function 만드는 법
