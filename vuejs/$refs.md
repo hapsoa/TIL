@@ -6,6 +6,7 @@
 # vue component class를 활용시 
 
 ```typescript
+// @ts-ignore-nextline
 public $refs: Vue['$refs'] & {
     editor: Editor;
 };

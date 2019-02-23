@@ -5,4 +5,33 @@
 클라이언트에서 firebase 관련 메소드를 호출 시에
 cloud function이 트리거되서 서버에서 작동되는 형식이랄까
 
-정확한건 더 공부하고 실행해보아야 할 듯 하다.
+<br>
+
+## 설치 진행
+
+npm i -g firebase-tools
+
+firebase init
+
+```
+What language would you like to use to write Cloud Functions? TypeScript
+? Do you want to use TSLint to catch probable bugs and enforce style? Yes
+✔  Wrote functions/package.json
+✔  Wrote functions/tslint.json
+✔  Wrote functions/tsconfig.json
+✔  Wrote functions/src/index.ts
+✔  Wrote functions/.gitignore
+? Do you want to install dependencies with npm now? Yes
+```
+
+```
+### 설명
+
+프로젝트 안 functions 디렉토리가 cloud function 을 관리한다.
+
+functions/src/index.ts 가 cloud function 코드 작성하는 중심인 곳
+```
+
+firebase deploy 하면 배포가 된다.
+
+firebase console의 Functions에 가보면 요청사항들이 기록되어 있다.

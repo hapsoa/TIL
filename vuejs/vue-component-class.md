@@ -1,4 +1,4 @@
-# vue를 class로 component를 만들 수 있다.
+# vue를 class로 component를 만들 수 있다. (vue-component-class)
 
 ```typescript
 import Vue from 'vue';
@@ -17,6 +17,13 @@ import { Component, Watch } from 'vue-property-decorator';
   },
 })
 export default class Editor extends Vue {
+  // @ts-ignore-nextline
+  public $refs: Vue['$refs'] & {
+    editor: Editor;
+    // editor 는 ref='editor'로 설정했고,
+    // Editor는 Editor.vue파일의 Editor.ts파일을 import한 것이다.
+  };
+
   private created() {
     this.$props.comment; // props 접근할 때
   }
