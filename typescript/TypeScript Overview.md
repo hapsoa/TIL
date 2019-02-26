@@ -1,3 +1,9 @@
+http://slides.com/woongjae/deck-8
+
+http://slides.com/woongjae/deck-8-14
+
+http://slides.com/woongjae/deck-8-15
+
 # TypeScript Overview
 
 TypeScript = Language
@@ -12,24 +18,23 @@ TypeScript = Language
 
 자바스크립트는 ' Interpreted Language ' 입니다.
 
-
-| Compiled | Interpreted |
-|--|--|
-| 컴파일이 필요 O | 컴파일이 필요 X  |
-| 컴파일러가 필요 O | 컴파일러가 필요 X |
-| 컴파일하는 시점 O => 컴파일 타임 | 컴파일하는 시점 X |
-| 컴파일된 결과물을 실행 | 코드 자체를 실행 |
-| 컴파일된 결과물을 실행하는 시점 | 코드를 실행하는 시점 o = 런타임 |
-
+| Compiled                         | Interpreted                     |
+| -------------------------------- | ------------------------------- |
+| 컴파일이 필요 O                  | 컴파일이 필요 X                 |
+| 컴파일러가 필요 O                | 컴파일러가 필요 X               |
+| 컴파일하는 시점 O => 컴파일 타임 | 컴파일하는 시점 X               |
+| 컴파일된 결과물을 실행           | 코드 자체를 실행                |
+| 컴파일된 결과물을 실행하는 시점  | 코드를 실행하는 시점 o = 런타임 |
 
 #### 정적 타입 언어 VS 동적 타입 언어
 
 ## Traditional Compiled Language
+
 컴파일 언어라고 한다.
 
 C, C++, Go, C#, Java, ...
 
-프로그래머가 작성한 ' Source Code ' 를 기계어로 변환하는 과정을  ' Compile ' 이라고 한다.
+프로그래머가 작성한 ' Source Code ' 를 기계어로 변환하는 과정을 ' Compile ' 이라고 한다.
 
 기계어로 변환된 결과물을 ' Object Code ' (목적 코드)라 한다.
 
@@ -50,6 +55,7 @@ C, C++, Go, C#, Java, ...
 <br>
 
 ## Traditional Compiled Language
+
 컴파일된 코드들은 ' Linking ' 이라는 과정을 통해 실행 파일로 만들어 진다.
 
 컴파일된 여러 목적 코드들을 합치고 라이브러리를 추가한다.
@@ -69,5 +75,3 @@ C, C++, Go, C#, Java, ...
 <br>
 
 TS --- 컴파일러 --->> JS
-
-

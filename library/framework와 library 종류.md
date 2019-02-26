@@ -1,6 +1,8 @@
-# web framework and library
+# web framework
 
 vue.js, react.js, angular.js : 가상 DOM과 데이터 기반 DOM그리는 프레임워크
+
+# javascrript library
 
 d3.js svg : 데이터 시각화 라이브러리
 
@@ -26,10 +28,12 @@ module bundler : webpack (비슷한거는 gulf, grunt)
 
 ckeditor 5: wysiwyg framework (npm 으로 import, require 가능)
 
+collections.js: binary heap같은 자료구조를 구현한 라이브러리
+
 ## vue.js 라이브러리
+
 vuetify : google material design 모듈
 
 bootstrap-vue : twitter design 모듈
 
 vue-cookie : cookie를 vue에서 쓰는 모듈
-

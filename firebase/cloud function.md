@@ -26,12 +26,15 @@ What language would you like to use to write Cloud Functions? TypeScript
 
 ```
 ### 설명
-
 프로젝트 안 functions 디렉토리가 cloud function 을 관리한다.
 
 functions/src/index.ts 가 cloud function 코드 작성하는 중심인 곳
 ```
 
 firebase deploy 하면 배포가 된다.
+(firebase deploy --only functions)
 
+```
 firebase console의 Functions에 가보면 요청사항들이 기록되어 있다.
+로그 창을 누르면 console.log() 호출한 내용을 볼 수 있고 이를 통해 디버그 가능
+```
