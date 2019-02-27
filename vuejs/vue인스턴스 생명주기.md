@@ -9,6 +9,13 @@
 속성의 종류 : beforeCreate, beforeMount, mounted, beforeUpdate, beforeDestroy, destroyed 로 총 8개
 <br>
 
+## 팁
+this.$router.push(); 로 이동하면
+
+컴포넌트가 변한것만 created()가 된다. app.vue의 created()는 불리지 않는다.
+
+
+
 ## 1. beforeCreate
 인스턴스가 생성되고 나서 가장 처음으로 실행되는 라이플 사이클 단계. 이 때는 뷰 인스턴스의 data와 methods 속성이 정의되어 있지 않고 화면 요소(dom) 에도 접근할 수 없음.
 

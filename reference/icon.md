@@ -1,0 +1,23 @@
+# 아이콘(폰트 스타일 적용되는) 넣기
+
+material design icon // 구글용 아이콘들
+fontawesome.com // 양이 더많음
+
+```html
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+```
+
+를 헤드에 넣는다.
+
+```html
+<i class="material-icons">check</i> //material design (google icon)
+```
+
+```html
+<i class="fa fa-user"></i> //fontawesome.com 용
+```
+
+아이콘들은 전부 폰트의 속성을 갖는다.

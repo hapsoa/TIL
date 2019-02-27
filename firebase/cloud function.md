@@ -38,3 +38,9 @@ firebase deploy 하면 배포가 된다.
 firebase console의 Functions에 가보면 요청사항들이 기록되어 있다.
 로그 창을 누르면 console.log() 호출한 내용을 볼 수 있고 이를 통해 디버그 가능
 ```
+
+## 팁
+
+dashboard에 있는 함수를 삭제하면, 해당 함수가 무한루프로 작동중이라도 종료가 되는 듯 하다.
+
+firebase deploy 하면 함수가 무한루프로 작동중이라도 종료가 되는 듯 하다.
