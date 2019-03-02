@@ -1,17 +1,17 @@
-# interface
+# typescript interface
 
 객체로 타입을 한정시킬 때 interface를 사용할 수 있다.
 
 아래 코드에서, 상위 코드를 하위코드로 사용할 수 있다.
 
 ```typescript
-function hello(person: { name: string; age: number; }): void {
-    console.log(`안녕하세요! ${person.name} 입니다.`);
+function hello(person: { name: string; age: number }): void {
+  console.log(`안녕하세요! ${person.name} 입니다.`);
 }
 
-const p: { name: string; age: number; } = {
-    name: 'Mark',
-    age: 35
+const p: { name: string; age: number } = {
+  name: 'Mark',
+  age: 35,
 };
 
 hello(p); // 안녕하세요! Mark 입니다.
@@ -19,17 +19,17 @@ hello(p); // 안녕하세요! Mark 입니다.
 ///////////////////////////////////////////////////////////////
 
 interface Person {
-    name: string;
-    age: number;
+  name: string;
+  age: number;
 }
 
 function hello(person: Person): void {
-    console.log(`안녕하세요! ${person.name} 입니다.`);
+  console.log(`안녕하세요! ${person.name} 입니다.`);
 }
 
 const p: Person = {
-    name: 'Mark',
-    age: 35
+  name: 'Mark',
+  age: 35,
 };
 
 hello(p); // 안녕하세요! Mark 입니다.
@@ -43,21 +43,21 @@ hello(p); // 안녕하세요! Mark 입니다.
 
 ```typescript
 interface Person {
-    name: string;
-    age?: number;
+  name: string;
+  age?: number;
 }
 
 function hello(person: Person): void {
-    console.log(`안녕하세요! ${person.name} 입니다.`);
+  console.log(`안녕하세요! ${person.name} 입니다.`);
 }
 
 const p1: Person = {
-    name: 'Mark',
-    age: 35
+  name: 'Mark',
+  age: 35,
 };
 
 const p2: Person = {
-    name: 'Anna'
+  name: 'Anna',
 };
 
 hello(p1); // 안녕하세요! Mark 입니다.
@@ -70,32 +70,29 @@ hello(p2); // 안녕하세요! Anna 입니다.
 
 ```typescript
 interface Person {
-    name: string;
-    age?: number;
-    [props: string]: any;
+  name: string;
+  age?: number;
+  [props: string]: any;
 }
 
 function hello(person: Person): void {
-    console.log(`안녕하세요! ${person.name} 입니다.`);
+  console.log(`안녕하세요! ${person.name} 입니다.`);
 }
 
 const p1: Person = {
-    name: 'Mark',
-    age: 35,
+  name: 'Mark',
+  age: 35,
 };
 
 const p2: Person = {
-    name: 'Anna',
-    systers: [
-        'Sung',
-        'Chan'
-    ]
+  name: 'Anna',
+  systers: ['Sung', 'Chan'],
 };
 
 const p3: Person = {
-    name: 'Bokdaengi',
-    father: p1,
-    mother: p2
+  name: 'Bokdaengi',
+  father: p1,
+  mother: p2,
 };
 
 hello(p1); // 안녕하세요! Mark 입니다.
@@ -156,21 +153,21 @@ class는 interface를 implements 할 수 있다.
 
 ```typescript
 interface IPerson {
-    name: string;
-    age?: number;
-    hello(): void;
+  name: string;
+  age?: number;
+  hello(): void;
 }
 
 class Person implements IPerson {
-    name: string;
+  name: string;
 
-    constructor(name: string) {
-        this.name = name;
-    }
+  constructor(name: string) {
+    this.name = name;
+  }
 
-    hello(): void {
-        console.log(`안녕하세요! ${this.name} 입니다.`);
-    }
+  hello(): void {
+    console.log(`안녕하세요! ${this.name} 입니다.`);
+  }
 }
 
 const person = new Person('Mark');
@@ -179,7 +176,7 @@ person.hello(); // 안녕하세요! Mark 입니다.
 
 <br>
 
-** 만약 아래 코드로 변수 타입을 interface로 지정하면,
+\*\* 만약 아래 코드로 변수 타입을 interface로 지정하면,
 
 interface 에 있는 변수와 함수만 person 변수가 활용할 수 있다.
 
@@ -195,17 +192,17 @@ interface 는 interface를 상속받을 수 있다.
 
 ```typescript
 interface Person {
-    name: string;
-    age?: number;
+  name: string;
+  age?: number;
 }
 
 interface Korean extends Person {
-    city: string;
+  city: string;
 }
 
 const k: Korean = {
-    name: '이웅재',
-    city: '서울'
+  name: '이웅재',
+  city: '서울',
 };
 ```
 
@@ -217,12 +214,12 @@ const k: Korean = {
 
 ```typescript
 interface HelloPerson {
-    // (name: string, age: number): void;
-    (name: string, age?: number): void;
+  // (name: string, age: number): void;
+  (name: string, age?: number): void;
 }
 
-let helloPerson: HelloPerson = function (name: string) {
-    console.log(`안녕하세요! ${name} 입니다.`);
+let helloPerson: HelloPerson = function(name: string) {
+  console.log(`안녕하세요! ${name} 입니다.`);
 };
 
 helloPerson('Mark'); // 안녕하세요! Mark 입니다.
@@ -246,22 +243,22 @@ number : array 같음
 
 ```typescript
 interface StringArray {
-    [index: number]: string;
+  [index: number]: string;
 }
 
 const sa: StringArray = {}; // 옵셔널하다
 sa[100] = '백';
 
 interface StringDictionary {
-    [index: string]: string;
+  [index: string]: string;
 }
 
 const sd: StringDictionary = {}; // 옵셔널하다
 sd.hundred = '백';
 
 interface StringArrayDictionary {
-    [index: number]: string;
-    [index: string]: string;
+  [index: number]: string;
+  [index: string]: string;
 }
 
 const sad: StringArrayDictionary = {};
@@ -274,12 +271,12 @@ sad.hundred = '백';
 
 ```typescript
 interface StringDictionary {
-    [index: string]: string;
-    name: string;
+  [index: string]: string;
+  name: string;
 }
 
 const sd: StringDictionary = {
-    name: '이름' // 필수
+  name: '이름', // 필수
 };
 
 sd.any = 'any'; // 어떤 프로퍼티도 가능
@@ -287,7 +284,7 @@ sd.any = 'any'; // 어떤 프로퍼티도 가능
 ////////////////////////////////////////////////
 
 interface StringDictionaryNo {
-    [index: string]: string;
-    // name: number; // (X) 인덱서블 타입이 string 값을 가지기 때문에 number 를 필수로 끌어오면 에러
+  [index: string]: string;
+  // name: number; // (X) 인덱서블 타입이 string 값을 가지기 때문에 number 를 필수로 끌어오면 에러
 }
 ```
