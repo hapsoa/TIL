@@ -440,7 +440,7 @@ class Preference {
 */
 ```
 
-## Class 와 싱글톤 패턴
+## Class 와 싱글톤(singleton) 패턴
 
 ```typescript
 class Preference {

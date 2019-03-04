@@ -1,4 +1,4 @@
-# decorator
+# typescript decorator
 
 동적으로 책임 추가가 필요할 때 데코레이터 패턴을 사용할 수 있다.
 

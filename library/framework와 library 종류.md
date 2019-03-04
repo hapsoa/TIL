@@ -30,6 +30,10 @@ ckeditor 5: wysiwyg framework (npm 으로 import, require 가능)
 
 collections.js: binary heap같은 자료구조를 구현한 라이브러리
 
+cloudinary : 이미지 변환 라이브러리면서, cloud drive가 따로 있음.(부분 유료화)
+clipping magic: 에디터로 배경화면 삭제시키는데, 그것을 웹앱에다 끼울 수 있나봄. 근데 유료.
+
+
 ## vue.js 라이브러리
 
 vuetify : google material design 모듈

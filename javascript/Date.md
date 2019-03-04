@@ -1,4 +1,4 @@
-# Date 객체
+# javascript Date 객체
 
 ```javascript
 const date = new Date();
