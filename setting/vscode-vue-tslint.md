@@ -3,6 +3,7 @@
 npm i --save tslint-config-prettier
 
 .vscode/settings.json 에 들어가서
+
 ```json
 "editor.formatOnSave": true,
 "prettier.tslintIntegration": true
@@ -11,10 +12,14 @@ npm i --save tslint-config-prettier
 <br>
 
 tslint.json에 들어가서
+
 ```json
 {
    ...
    "extends": ["tslint:recommended", "tslint-config-prettier"],
+   "rules": {
+      "no-console": [false, "log", "error"]
+   }
    ...
 }
 ```
