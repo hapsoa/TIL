@@ -22,6 +22,7 @@ export default class Editor extends Vue {
     editor: Editor;
     // editor 는 ref='editor'로 설정했고,
     // Editor는 Editor.vue파일의 Editor.ts파일을 import한 것이다.
+    loadDialog;
   };
 
   private created() {
@@ -42,5 +43,17 @@ export default class Editor extends Vue {
     }
     return false;
   }
+}
+```
+
+<br>
+
+# mixin (vue-component-class 에서)
+
+```javascript
+import { mixins } from 'vue-class-component';
+import EditorMixin from './editor-mixin';
+
+export default class BoardEditing extends mixins(EditorMixin) {
 }
 ```
