@@ -14,7 +14,12 @@ tslint.json에 들어가서
 ```json
 {
    ...
+   // 덮어써도 됨
    "extends": ["tslint:recommended", "tslint-config-prettier"],
+   // 추가하기
+   "rules": {
+      "no-console": [false, "log", "error"]
+   }
    ...
 }
 ```
