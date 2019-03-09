@@ -55,5 +55,6 @@ import { mixins } from 'vue-class-component';
 import EditorMixin from './editor-mixin';
 
 export default class BoardEditing extends mixins(EditorMixin) {
+  
 }
 ```
