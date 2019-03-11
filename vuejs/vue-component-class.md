@@ -50,10 +50,19 @@ export default class Editor extends Vue {
 
 # mixin (vue-component-class 에서)
 
+mixin
+
+```javascript
+export default class EditorMixin extends Vue {}
+```
+
+<br>
+
+extends 받는 것
+
 ```javascript
 import { mixins } from 'vue-class-component';
 import EditorMixin from './editor-mixin';
 
-export default class BoardEditing extends mixins(EditorMixin) {
-}
+export default class BoardEditing extends mixins(EditorMixin) {}
 ```
