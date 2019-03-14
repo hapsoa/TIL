@@ -113,5 +113,68 @@ template 태그를 이용하면 부모 컴포넌트에서 slot 안에
 </button-tab>
 ```
 
+# slot-scope
+부모 컴포넌트에서 자식 컴포넌트의 slot태그 속성값을 사용할 수 있게하는 것인듯
+
+자식 컴포넌트 :
+```html
+<div class="child">
+  <slot text="hello from child"></slot>
+</div>
+```
+
+부모 컴포넌트 :
+```html
+<div class="parent">
+  <child>
+    <template slot-scope="props">
+      <span>hello from parent</span>
+      <span>{{ props.text }}</span>
+    </template>
+  </child>
+</div>
+```
+
+렌더링하면 :
+```html
+<div class="parent">
+  <div class="child">
+    <span>hello from parent</span>
+    <span>hello from child</span>
+  </div>
+</div>
+```
+
+
+
+
+
+
+
+
+
+
+
 <br><br><br><br><br><br><br>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 출처 : https://joshua1988.github.io/web-development/vuejs/slots/
+```

@@ -11,6 +11,7 @@
 ctrl + . : Quick Fix
 command p(ctrl + p) : 현재 폴더(프로젝트)에서 명령어
 command shift p : ide 자체의 명령어
+ctrl + d : 같은 단어 여러개 선택
 ```
 
 ## extionsion
