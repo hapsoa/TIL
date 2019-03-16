@@ -33,3 +33,15 @@ module.exports = {
   parallel: undefined,
 };
 ```
+
+<br>
+
+# 오류 해결 방법
+
+git subtree push --prefix dist origin gh-pages 가 실패하고, pull 하라고 뜰 때
+
+```
+git push origin :gh-pages && git subtree push --prefix dist origin gh-pages
+```
+
+'deletes the branch and re-pushes. Avoids all that remote branch being ahead fluff that others are mentioning ' 라고 함.
