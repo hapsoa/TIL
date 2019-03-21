@@ -27,6 +27,7 @@ export default class Editor extends Vue {
 
   private created() {
     this.$props.comment; // props 접근할 때
+    this.$refs.editor.addRect(); // ref중 canvas의 addRect() 메소드 호출
   }
 
   // watch
