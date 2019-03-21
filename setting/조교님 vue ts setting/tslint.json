@@ -1,0 +1,25 @@
+{
+  "defaultSeverity": "warning",
+  "extends": ["tslint:latest"],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**",
+      "src/**/*.json",
+      "src/data/**",
+      "functions/**/*.*"
+    ]
+  },
+  "rules": {
+    "quotemark": [true, "single"],
+    "indent": [true, "spaces", 2],
+    "interface-name": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-consecutive-blank-lines": false,
+    "trailing-comma": false,
+    "no-submodule-imports": false,
+    "no-console": false,
+    "variable-name": [true, "check-format", "allow-leading-underscore"],
+    "no-implicit-dependencies": false
+  }
+}
