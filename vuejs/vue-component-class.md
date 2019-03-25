@@ -3,6 +3,7 @@
 ```typescript
 import Vue from 'vue';
 import { Component, Watch } from 'vue-property-decorator';
+import ReCommentComponent from '@/components/ReCommentComponent/ReCommnentComponent.vue';
 
 @Component({
   props: {
