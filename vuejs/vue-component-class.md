@@ -26,12 +26,19 @@ export default class Editor extends Vue {
     loadDialog;
   };
 
+  // 이게 버그가 없다.
+  @Prop({ default: 1000 }) public limitLength!: number;
+
   private created() {
     this.$props.comment; // props 접근할 때
+    this.$props.limitLength; // props 접근할 때
     this.$refs.editor.addRect(); // ref중 canvas의 addRect() 메소드 호출
   }
 
   // watch
+  // pagination.page가 변경되는 변수이름
+  // { deep: true }는 pagination이 object이기 때문에 그 안의 변수를 인식하기 위해서 사용. 그렇지 않다면 안써도 됨.
+  // onPageChanged는 pagination.page와 이름만 다르게
   @Watch('pagination.page', { deep: true })
   public onPageChanged(value: number, oldValue: number) {
     console.log('page', value);

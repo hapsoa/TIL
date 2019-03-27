@@ -240,7 +240,7 @@ Void 는 없습니다. 소문자입니다.
 주로 함수의 리턴이 없을 때 사용합니다. 그 외에는 사용할 일이 거의 없습니다.
 
 ```typescript
-function returnVoid(message): void {
+function returnVoid(message: string): void {
   console.log(message);
 }
 
@@ -260,7 +260,7 @@ returnVoid('리턴이 없다');
 noImplicitAny
 
 ```typescript
-function returnAny(message): any {
+function returnAny(message: string): any {
   console.log(message);
 }
 
