@@ -27,7 +27,7 @@ export default class Editor extends Vue {
   };
 
   // 이게 버그가 없다.
-  @Prop({ default: 1000 }) public limitLength!: number;
+  @Prop({type: Number ,default: 1000 }) public limitLength!: number;
   @Prop{ required: true, type: Object as () => BoardPostType }
   public asdf!: BoardPostType;
 
@@ -53,6 +53,10 @@ export default class Editor extends Vue {
       return _.isNil(this.boardInstance.uid);
     }
     return false;
+  }
+  // computed setter
+  set isNonMember(variable: boolean) {
+    // ....
   }
 }
 ```
