@@ -13,3 +13,5 @@ json을 require하고
 ## JSON을 크롬의 브라우저 콘솔로 복사하는법
 
 console.log(JSON.stringify(variable));
+
+.
