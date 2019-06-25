@@ -14,6 +14,7 @@
 
 3.애널리틱스 : 대한민국
 
-4.cloud firestore: asia-northeast1
+4. firebase database로 들어간다음 firestore 생성하기를 누른다.
+   cloud firestore: asia-northeast1
 
 만들기 누르기.
