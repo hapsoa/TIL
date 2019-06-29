@@ -28,7 +28,7 @@ export default class Editor extends Vue {
 
   // 이게 버그가 없다.
   @Prop({type: Number ,default: 1000 }) public limitLength!: number;
-  @Prop{ required: true, type: Object as () => BoardPostType }
+  @Prop({ required: true, type: Object as () => BoardPostType })
   public asdf!: BoardPostType;
 
   private created() {
