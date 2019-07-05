@@ -1,5 +1,11 @@
 # HtmlElement position 관련 정리
 
+## HtmlElement 가로 길이
+
+```
+HtmlElement객체.clientWidth
+```
+
 ## HtmlElement의 위치 찾기
 
 ```
@@ -18,5 +24,10 @@ HtmlElement객체.scroll(x, y)
 HtmlElement객체.scrollTo(x, y)
 
 HtmlElement객체.scrollBy(x, y)
+```
 
+## 최상단으로 스크롤하기
+
+```javascript
+window.scrollTo(xCoord, yCoord);
 ```
