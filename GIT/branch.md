@@ -8,7 +8,7 @@ git checkout + [브랜치이름] : 해당 브랜치에 들어간다.
 
 git merge + [commit id] : HEAD가 있는 branch가 commitId의 커밋을 가지고와 병합한다.
 
-git branch -d + [브랜치이름] : 필요없는 branch를 삭제할 수 이싸.
+git branch -d + [브랜치이름] : 필요없는 branch를 삭제할 수 있다.
 
 ## 동시에 여러 작업하기
 
@@ -32,5 +32,11 @@ git branch --set-upstream-to origin/issue2
 
 
 
+// 다른 컴퓨터에서
+// remote branch들을 조회할 수 있다.
+git branch -r
+
+// 다른 컴퓨터에서 branch를 hapsoa를 생성하면서 origin/hapsoa remote branch를 가지고 온다.
+git checkout -b hapsoa origin/hapsoa
 ```
 
