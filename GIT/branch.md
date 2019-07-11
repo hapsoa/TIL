@@ -19,8 +19,18 @@ git branch issue3
 
 git checkout issue2
 
+코드를 편집한다.
+
 git add .
 git commit -m "update at issue2 branch"
+
+// 해당 branch를 저장소 remote branch에도 생성한다.
+git push origin issue2
+
+// local의 branch를 retmoe branch와 연동하는 작업을 수행한다.
+git branch --set-upstream-to origin/issue2
+
+
 
 ```
 
