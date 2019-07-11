@@ -11,6 +11,7 @@ git merge + [commit id] : HEAD가 있는 branch가 commitId의 커밋을 가지�
 
 git branch -d + [브랜치이름] : 필요없는 branch를 삭제할 수 있다.
 git branch -D + [브랜치이름] : 필요없는 branch를 '강제'삭제할 수 있다.
+(작업된 사항이나 commit 한 이력이 남아있는 경우, 해당 command로 branch가 삭제되지 않는 경우가 있습니다. 이러한 경우에는 강제로 branch를 삭제할 수 있습니다.)
 git push origin :[브랜치이름] : remote branch를 삭제한다.
 
 
