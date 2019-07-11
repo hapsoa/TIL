@@ -10,6 +10,17 @@ git merge + [commit id] : HEAD가 있는 branch가 commitId의 커밋을 가지�
 
 git branch -d + [브랜치이름] : 필요없는 branch를 삭제할 수 있다.
 
+git branch -D + [브랜치이름] : 필요없는 branch를 '강제'삭제할 수 있다.
+
+git push origin :[브랜치이름] : remote branch를 삭제한다.
+
+
+A브랜치에서 B브랜치를 병합한다 (= A로 B를 가져온다. A<-B)
+
+git merge B브랜치명 (ex. git merge exp)
+
+
+
 ## 동시에 여러 작업하기
 
 ```
@@ -36,7 +47,9 @@ git branch --set-upstream-to origin/issue2
 // remote branch들을 조회할 수 있다.
 git branch -r
 
-// 다른 컴퓨터에서 branch를 hapsoa를 생성하면서 origin/hapsoa remote branch를 가지고 온다.
-git checkout -b hapsoa origin/hapsoa
+// remote branch의 이름을 그대로 유지하면서 가져온다.
+git checkout -t origin/hapsoa
+(// 다른 컴퓨터에서 branch를 hapsoa를 생성하면서 origin/hapsoa remote branch를 가지고 온다.
+git checkout -b hapsoa origin/hapsoa)
 ```
 
