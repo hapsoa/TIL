@@ -15,7 +15,7 @@ git push origin :[브랜치이름] : remote branch를 삭제한다.
 
 
 A브랜치에서 B브랜치를 병합한다 (= A로 B를 가져온다. A<-B)
-git merge B브랜치명 (ex. git merge exp)
+git merge B브랜치명 (ex. git merge hapsoa)
 ```
 
 
