@@ -19,7 +19,6 @@ A브랜치에서 B브랜치를 병합한다 (= A로 B를 가져온다. A<-B)
 git merge B브랜치명 (ex. git merge hapsoa)
 ```
 
-
 ## 동시에 여러 작업하기
 
 ```
@@ -52,3 +51,39 @@ git checkout -t origin/hapsoa
 git checkout -b hapsoa origin/hapsoa)
 ```
 
+<br>
+
+## 함께하는 프로젝트에서 다른 컴퓨터로 내 하던 작업 옮기기
+
+```
+// 현재 컴퓨터의 작업내역을 github에 올리기
+git branch hapsoa
+git checkout hapsoa
+
+git add .
+git commit -m "update"
+
+git push origin hapsoa
+git branch --set-upstream-to origin/hapsoa
+
+
+// 다른 컴퓨터에서 작업내역을 불러오기
+git branch -r
+git checkout -t origin/hapsoa
+
+
+// 다른컴퓨터에서 작업하기
+git checkout hapsoa
+
+git add .
+git commit -m "update"
+
+
+// origin/master에서 hapsoa branch를 가져와 병합하기
+git merge hapsoa
+
+
+// branch 삭제하기
+git branch -d + [브랜치이름]
+git push origin :[브랜치이름]
+```
