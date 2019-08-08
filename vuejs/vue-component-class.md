@@ -1,21 +1,15 @@
 # vue를 class로 component를 만들 수 있다. (vue-component-class)
 
 ```typescript
-import Vue from 'vue';
-import { Component, Watch, Prop } from 'vue-property-decorator';
-import ReCommentComponent from '@/components/ReCommentComponent/ReCommnentComponent.vue';
+import Vue from "vue";
+import { Component, Watch, Prop } from "vue-property-decorator";
+import ReCommentComponent from "@/components/ReCommentComponent/ReCommnentComponent.vue";
 
 @Component({
-  // props: {
-  //   comment: {
-  //     type: Object as () => Comment,
-  //     required: true,
-  //   },
-  // },
   components: {
     ReCommentComponent,
-    EditorComponent,
-  },
+    EditorComponent
+  }
 })
 export default class Editor extends Vue {
   public $refs!: {
@@ -41,9 +35,9 @@ export default class Editor extends Vue {
   // pagination.page가 변경되는 변수이름
   // { deep: true }는 pagination이 object이기 때문에 그 안의 변수를 인식하기 위해서 사용. 그렇지 않다면 안써도 됨.
   // onPageChanged는 pagination.page와 이름만 다르게
-  @Watch('pagination.page', { deep: true })
+  @Watch("pagination.page", { deep: true })
   public onPageChanged(value: number, oldValue: number) {
-    console.log('page', value);
+    console.log("page", value);
     this.setCommentList(value);
   }
 
@@ -76,8 +70,8 @@ export default class EditorMixin extends Vue {}
 extends 받는 것
 
 ```javascript
-import { mixins } from 'vue-class-component';
-import EditorMixin from './editor-mixin';
+import { mixins } from "vue-class-component";
+import EditorMixin from "./editor-mixin";
 
 export default class BoardEditing extends mixins(EditorMixin) {}
 ```
