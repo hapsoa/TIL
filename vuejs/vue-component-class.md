@@ -20,7 +20,7 @@ export default class Editor extends Vue {
     // Editor는 Editor.vue파일의 Editor.ts파일을 import한 것이다.
   };
 
-  // 이게 버그가 없다.
+  // 이게 버그가 없다
   @Prop({ type: Number, default: 1000 }) public limitLength!: number;
   @Prop({ required: true, type: Object as () => BoardPostType })
   public asdf!: BoardPostType;
