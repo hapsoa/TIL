@@ -14,5 +14,5 @@ dynamic network
 
 데이터 시각화(data visualization)
 데이터 마이닝(data mining)
-데이터 분석(data analysis)
+데이터 분석(data analysis) : 클러스터링, 차원축소
 ```
